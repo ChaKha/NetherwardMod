@@ -1,0 +1,16 @@
+[
+    {
+      "modid": "nw",
+      "name": "The Netherward Mod",
+      "description": "A mod that adds bosses customized specifically to the Netherward's desires!",
+      "version": "0.0.1",
+      "mcversion": "1.7.10",
+      "url": "",
+      "updateUrl": "",
+      "authorList": ["ChaKha", "CrazyMonkeyMcgee", "Bonesong"],
+      "credits": "WIP",
+      "logoFile": "",
+      "screenshots": [],
+      "dependencies": []
+    }
+]
