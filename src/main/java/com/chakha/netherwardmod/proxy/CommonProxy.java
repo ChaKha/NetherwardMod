@@ -1,6 +1,7 @@
 package com.chakha.netherwardmod.proxy;
 
 import com.chakha.netherwardmod.NWMain;
+import com.chakha.netherwardmod.blocks.BlockBean;
 import com.chakha.netherwardmod.items.ItemBean;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -8,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class CommonProxy {
@@ -16,8 +18,11 @@ public class CommonProxy {
 	
 	public static Item itemBean;
 	
+	public static Block blockBean;
+	
 	public void preInit(FMLPreInitializationEvent event) {
 		registerItems();
+		registerBlocks();
 		registerModEntities();
 	}
 	
@@ -38,6 +43,11 @@ public class CommonProxy {
 	 */
 	public void registerModEntity(Class parEntityClass, String parEntityName) {
 	    EntityRegistry.registerModEntity(parEntityClass, parEntityName, ++modEntityID, NWMain.instance, 80, 3, false);
+	}
+	
+	public void registerBlocks() {
+		blockBean = new BlockBean();
+		GameRegistry.registerBlock(blockBean, "BlockBean");
 	}
 	
 	public void registerItems() {
