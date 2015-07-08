@@ -1,17 +1,13 @@
 package com.chakha.netherwardmod.entities;
 
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
-import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityPlantBossBulb extends EntityMob implements IBossDisplayData {
+public class EntityNWPlantBoss extends EntityLiving implements IBossDisplayData, IEntityMultiPart, IMob {
 
-	public EntityPlantBossBulb(World world) {
+	public EntityNWPlantBoss(World world) {
 		super(world);
 		this.setHealth(this.getMaxHealth());
         this.setSize(0.9F, 4.0F);

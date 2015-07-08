@@ -11,7 +11,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid = "nw", name = "The Netherward Boss Mod", version = "0.0.1")
+@Mod(modid = "nw", name = "The Netherward Mod", version = "0.0.1")
 public class NWMain {
 
 	@Mod.Instance("nw")

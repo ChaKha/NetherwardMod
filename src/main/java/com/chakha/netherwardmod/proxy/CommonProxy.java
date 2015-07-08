@@ -16,13 +16,13 @@ public class CommonProxy {
 
 	protected int modEntityID = -1;
 	
-	public static Item itemBean;
+	public static Block blockBean = new BlockBean();
 	
-	public static Block blockBean;
+	public static Item itemBean = new ItemBean();
 	
 	public void preInit(FMLPreInitializationEvent event) {
-		registerItems();
 		registerBlocks();
+		registerItems();
 		registerModEntities();
 	}
 	
@@ -46,12 +46,10 @@ public class CommonProxy {
 	}
 	
 	public void registerBlocks() {
-		blockBean = new BlockBean();
 		GameRegistry.registerBlock(blockBean, "BlockBean");
 	}
 	
 	public void registerItems() {
-		itemBean = new ItemBean();
 		GameRegistry.registerItem(itemBean, "ItemBean");
 	}
 }
